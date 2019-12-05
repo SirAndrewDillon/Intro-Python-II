@@ -1,29 +1,28 @@
-from room import Room
-from player import Player
-from item import Item
 import random
+
+from player import Player
+from room import Room
 
 # Declare all the rooms
 # Dictionary of rooms
 room = {
-    'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+    'outside': Room("Outside Cave Entrance",
+                    "North of you, the cave mount beckons"),
 
-    'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
+    'foyer': Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
 
     'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
 into the darkness. Ahead to the north, a light flickers in
 the distance, but there is no way across the chasm."""),
 
-    'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
+    'narrow': Room("Narrow Passage", """The narrow passage bends here from west
 to north. The smell of gold permeates the air."""),
 
     'treasure': Room("Treasure Chamber", """You've found the long-lost treasure
 chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
-
 
 # Link rooms together
 # Dot notation to access a class
@@ -113,7 +112,7 @@ while selection != 'q':
                     "Enter the number for which Item you want to pick up: ")
                 item_selection = int(item_selection)
                 if item_selection > 0 and item_selection <= len(player_one.current_room.items):
-                    item_name = player_one.current_room.items[item_selection-1]
+                    item_name = player_one.current_room.items[item_selection - 1]
                     if str(item_name) == "Food":
                         print("You have gained 2 health!")
                         health = player_one.health
