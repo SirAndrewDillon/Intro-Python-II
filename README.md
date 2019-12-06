@@ -75,7 +75,7 @@ The `/src` directory contains the files `adv.py`, which is where the main logic 
 
   * Until now, the parser could just understand one sentence form:
 
-     `verb`
+     `verb` `blurb`
 
     such as "n" or "q".
 
